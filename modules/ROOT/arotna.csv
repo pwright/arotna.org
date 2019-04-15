@@ -1,1 +1,6 @@
 level,prefix,heading,slug,navtext
+1,*, Concepts, concepts, Concepts
+2,**, Asciidoctor and Asciidoc, asciidoc, Asciidoc
+2,**, Antora, antora, Antora
+2,**, JavaScript and Asciidoc,javascript, JavaScript
+1,*, Creating an Antora docs site,antora-proc, Doing Antora
