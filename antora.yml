@@ -1,5 +1,5 @@
-name: relnotes
-title: Release Notes
+name: arotna
+title: Arotna
 version: 'latest'
 start_ROOT: ROOT:index.adoc
 nav:
