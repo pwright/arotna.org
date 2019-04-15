@@ -1,0 +1,12 @@
+site:
+  title: Arotna
+  url: https://arotna.netlify.com
+  start_page: arotna::index 
+content:
+  sources:
+  - url: https://github.com/finp/arotna.org.git
+    branches: master
+ui:
+  bundle:
+    url: https://github.com/finp/arotna.org/raw/master/ui-bundle.zip
+    
