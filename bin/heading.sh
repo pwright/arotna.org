@@ -1,0 +1,1 @@
+q -H -d , "SELECT '= ' || heading FROM ./docs/nav.csv WHERE slug = '$1'" 

@@ -1,0 +1,15 @@
+include::_partials/attributes.adoc[]
+
+:context:
+
+= Release Notes
+
+Imagine the perfect release notes, they informm the user with good news, bad news, <x>
+where x is total gibberish to the user, <y> is really pertinent information to the user delivered in time for the user to react, and <z>. <z> would have been really pertinent to user but was learned by support and put in the release notes in the vain hope that anyone ends up in the exact co-ordinates of that unfortunate user. 
+Oh, I forgot, the 'perfect release' notes, so remove <z>, right?
+
+Is that the pipeline of release notes to the first approximation?
+
+// tag::excludeDownstream[]
+include::_partials/toc.adoc[]
+// end::excludeDownstream[]
