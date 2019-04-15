@@ -8,5 +8,4 @@ content:
     branches: HEAD
 ui:
   bundle:
-    url: ./ui-bundle.zip
-    
+    url: ../ui-bundle.zip
