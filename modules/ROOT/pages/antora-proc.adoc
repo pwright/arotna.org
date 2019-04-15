@@ -5,4 +5,58 @@ include::_partials/attributes.adoc[]
 [antora-proc]
 = Creating an Antora docs site
 
+.Prerequisites
+[%collapsible%open]
+====
+* http://harelba.github.io/q/[q] csv query tool
+* https://docs.antora.org/[Antora]
+====
 
+== Procedure
+
+. Clone the https://github.com/finp/arotna.org[arotna.org] repo.
+. Change to the root directory of the repo:
++
+----
+$ cd arotna.org
+----
++
+NOTE: You should be able to build the master branch using `./bin/quick-build.sh local-site.yml`.
+
+. Change to the `empty` branch.
++
+----
+$ git checkout empty
+----
+. Edit the following files and replace `arotna` with the code name for your project:
++
+----
+antora.yml
+local-site.yml
+----
+. Edit the `docs/pages/index.adoc` file to provide an introduction.
+
+. Edit the `docs/arotna.csv` file to structure your site, for example:
++
+----
+level,prefix,heading,slug,navtext
+1,*, User story, user-story, Story
+2,**, Breaking changes, breaking-changes, Changes
+2,**, New User story, new-story, New
+2,**, User story announcements, announcement, Announcements
+2,**, Deprecated user stories, deprecated, Deprecations 
+1,*, Known Issues, known-issues, Known issues
+----
++
+where:
++
+* slug defines the filenames and ids required for your site
+* heading defines the pages
+* level and prefix define the hierarchy
+* navtext defines the short name used in left hand menu
+
+. Run the following command from the root directory of the repo:
++
+----
+$ ./bin/quick-build.sh local-site.yml
+----

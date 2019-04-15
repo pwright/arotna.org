@@ -5,4 +5,17 @@ include::_partials/attributes.adoc[]
 [concepts]
 = Concepts
 
+For new users, this is an easy way to get started with AsciiDoc.
+For more experienced users, it's a way to extend control of your AsciiDoc content.
+
+Typically, AsciiDoc is regarded as a markdown variant, however with JavaScript, it has grown into a fully capable information system.
+
+Typically, tech writers use Antora to produce complex publication systems, and Antora supports that, but it difficult to understand the structure. With arotna, the structure is simpler:
+
+* docs/arotna.csv - controls the pages that are published
+* docs/template.adoc - a template for any new files that must be created
+* bin/quickbuild.sh - a script to run the playbook (local-site.yml) and create html
+
+
+
 

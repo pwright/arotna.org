@@ -5,4 +5,9 @@ include::_partials/attributes.adoc[]
 [asciidoc]
 = Asciidoctor and Asciidoc
 
+AsciiDoc is a markup language for producing documentation:
+
+* The original `asciidoc` command is obsolete.
+* The defacto command is currently `asciidoctor`.
+* Asciidoctor is written in ruby, but Java and xref:javascript.adoc[JavaScript] versions are transpiled.
 

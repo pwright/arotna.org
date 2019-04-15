@@ -5,4 +5,8 @@ include::_partials/attributes.adoc[]
 [antora]
 = Antora
 
+If you are familar with Antora, note the following:
 
+* you must not edit nav.adoc. This file is generated from docs/arotna.csv
+* some extra files are generated, single.adoc, and toc.adoc.
+ 

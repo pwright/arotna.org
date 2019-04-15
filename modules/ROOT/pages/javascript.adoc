@@ -5,4 +5,8 @@ include::_partials/attributes.adoc[]
 [javascript]
 = JavaScript and Asciidoc
 
+Antora is not the only use of JavaScript to render AsciiDoc. 
+You can also use https://github.com/finp/siteless[siteless] to publish the master branch of your repo using GitHub pages.
+
+NOTE: In this case, AsciiDoc is converted to HTML in the browser, so there is no build step.
 

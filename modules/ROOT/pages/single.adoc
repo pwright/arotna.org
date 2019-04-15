@@ -23,6 +23,19 @@ The goal of Arotna is to explore the use of AsciiDoc in various formats.
 [concepts]
 = Concepts
 
+For new users, this is an easy way to get started with AsciiDoc.
+For more experienced users, it's a way to extend control of your AsciiDoc content.
+
+Typically, AsciiDoc is regarded as a markdown variant, however with JavaScript, it has grown into a fully capable information system.
+
+Typically, tech writers use Antora to produce complex publication systems, and Antora supports that, but it difficult to understand the structure. With arotna, the structure is simpler:
+
+* docs/arotna.csv - controls the pages that are published
+* docs/template.adoc - a template for any new files that must be created
+* bin/quickbuild.sh - a script to run the playbook (local-site.yml) and create html
+
+
+
 
 
 :leveloffset: 0
@@ -35,6 +48,11 @@ The goal of Arotna is to explore the use of AsciiDoc in various formats.
 [asciidoc]
 = Asciidoctor and Asciidoc
 
+AsciiDoc is a markup language for producing documentation:
+
+* The original `asciidoc` command is obsolete.
+* The defacto command is currently `asciidoctor`.
+* Asciidoctor is written in ruby, but Java and xref:javascript.adoc[JavaScript] versions are transpiled.
 
 
 :leveloffset: 0
@@ -47,6 +65,10 @@ The goal of Arotna is to explore the use of AsciiDoc in various formats.
 [antora]
 = Antora
 
+If you are familar with Antora, note the following:
+
+* you must not edit nav.adoc. This file is generated from docs/arotna.csv
+* some extra files are generated, single.adoc, and toc.adoc.
 
 
 :leveloffset: 0
@@ -59,6 +81,10 @@ The goal of Arotna is to explore the use of AsciiDoc in various formats.
 [javascript]
 = JavaScript and Asciidoc
 
+Antora is not the only use of JavaScript to render AsciiDoc.
+You can also use https://github.com/finp/siteless[siteless] to publish the master branch of your repo using GitHub pages.
+
+NOTE: In this case, AsciiDoc is converted to HTML in the browser, so there is no build step.
 
 
 :leveloffset: 0
@@ -71,6 +97,60 @@ The goal of Arotna is to explore the use of AsciiDoc in various formats.
 [antora-proc]
 = Creating an Antora docs site
 
+.Prerequisites
+[%collapsible%open]
+====
+* http://harelba.github.io/q/[q] csv query tool
+* https://docs.antora.org/[Antora]
+====
 
+== Procedure
+
+. Clone the https://github.com/finp/arotna.org[arotna.org] repo.
+. Change to the root directory of the repo:
++
+----
+$ cd arotna.org
+----
++
+NOTE: You should be able to build the master branch using `./bin/quick-build.sh local-site.yml`.
+
+. Change to the `empty` branch.
++
+----
+$ git checkout empty
+----
+. Edit the following files and replace `arotna` with the code name for your project:
++
+----
+antora.yml
+local-site.yml
+----
+. Edit the `docs/pages/index.adoc` file to provide an introduction.
+
+. Edit the `docs/arotna.csv` file to structure your site, for example:
++
+----
+level,prefix,heading,slug,navtext
+1,*, User story, user-story, Story
+2,**, Breaking changes, breaking-changes, Changes
+2,**, New User story, new-story, New
+2,**, User story announcements, announcement, Announcements
+2,**, Deprecated user stories, deprecated, Deprecations
+1,*, Known Issues, known-issues, Known issues
+----
++
+where:
++
+* slug defines the filenames and ids required for your site
+* heading defines the pages
+* level and prefix define the hierarchy
+* navtext defines the short name used in left hand menu
+
+. Run the following command from the root directory of the repo:
++
+----
+$ ./bin/quick-build.sh local-site.yml
+----
 
 :leveloffset: 0
