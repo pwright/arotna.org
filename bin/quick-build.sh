@@ -14,7 +14,7 @@ do
    echo $file
    if [ ! -f $file ]; then
     echo "File not found!"
-    ./bin/heading.sh $slug > $file
+    ./bin/createFile.sh $slug $file
 
    fi
 done
