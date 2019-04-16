@@ -17,9 +17,9 @@ The goal of Arotna is to get you going with creating a doc site using Antora qui
 antora.yml
 local-site.yml
 ----
-. Edit the `docs/pages/index.adoc` file to provide an introduction.
+. Edit the `modules/ROOT/pages/index.adoc` file to provide an introduction.
 
-. Edit the `docs/arotna.csv` file to structure your site, for example:
+. Edit the `modules/ROOT/arotna.csv` file to structure your site, for example:
 +
 ----
 level,prefix,heading,slug,navtext
